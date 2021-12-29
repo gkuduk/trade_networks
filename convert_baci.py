@@ -4,6 +4,9 @@ import csv
 input_filename = 'data/BACI/BACI_HS12_Y2014_V202102.csv'
 output_filename = 'net/baci.txt'
 
+baci_cc_filename = 'data/BACI/country_codes_V202102.csv'
+igo_cc_filename = 'data/IGO/country_codes.csv'
+
 if (len(sys.argv) == 2):
     input_filename = sys.argv[1]
 if (len(sys.argv) == 3):
@@ -11,13 +14,14 @@ if (len(sys.argv) == 3):
     output_filename = sys.argv[2]
 
 
+net = {}
+baci_cc = {}
+igo_cc = []
 
 with open(input_filename) as csv_file:
     
     csv_reader = csv.DictReader(csv_file)
     line_count = 0
-    
-    net = {}
     
     for row in csv_reader:
         if line_count == 0:
@@ -39,12 +43,41 @@ with open(input_filename) as csv_file:
                 net[row['i']] = {}
             net[row['i']][row['j']] = float(row['v'])
         
-        line_count +=1
+        line_count += 1
     
     print(f'Processed {line_count} lines.')
-    
-    with open(output_filename, 'w') as txt_file:
-        for el in net:
-            for el2 in net[el]:
-                txt_file.write(f'{ el } { el2 } { net[el][el2] }\n')
 
+
+with open(baci_cc_filename) as cc_file:
+    
+    csv_reader = csv.DictReader(cc_file)
+    line_count = 0
+    
+    for row in csv_reader:
+        if line_count == 0:
+            line_count += 1
+        
+        baci_cc[row['country_code']] = row['country_name_full']
+        line_count += 1
+
+with open(igo_cc_filename) as cc_file:
+    
+    csv_reader = csv.DictReader(cc_file)
+    line_count = 0
+    
+    for row in csv_reader:
+        if line_count == 0:
+            line_count += 1
+        
+        igo_cc.append(row['country_name'])
+        line_count += 1
+
+
+with open(output_filename, 'w') as txt_file:
+    for el in net:
+        if baci_cc[el] not in igo_cc:
+            continue
+        for el2 in net[el]:
+            if baci_cc[el] not in igo_cc:
+                continue
+            txt_file.write(f'{ el } { el2 } { net[el][el2] }\n')
