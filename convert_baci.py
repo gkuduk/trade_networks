@@ -7,6 +7,8 @@ output_filename = 'net/baci.txt'
 baci_cc_filename = 'data/BACI/country_codes_V202102.csv'
 igo_cc_filename = 'data/IGO/country_codes.csv'
 
+igo_net_filename = 'net/IGO_selected_politic_and_military.txt'
+
 if (len(sys.argv) == 2):
     input_filename = sys.argv[1]
 if (len(sys.argv) == 3):
@@ -16,7 +18,8 @@ if (len(sys.argv) == 3):
 
 net = {}
 baci_cc = {}
-igo_cc = []
+igo_cc = {}
+selected_igo = []
 
 with open(input_filename) as csv_file:
     
@@ -69,15 +72,31 @@ with open(igo_cc_filename) as cc_file:
         if line_count == 0:
             line_count += 1
         
-        igo_cc.append(row['country_name'])
+        igo_cc[row['country_code']] = row['country_name']
         line_count += 1
 
+with open(igo_net_filename) as txt_file:
+    lines = txt_file.read().splitlines()
+    
+    for line in lines:
+        row = line.split(' ')
+
+        if row[0] not in selected_igo:
+            selected_igo.append(row[0])
+        if row[1] not in selected_igo:
+            selected_igo.append(row[1])
+
+
+for idx, el in enumerate(selected_igo):
+    if el in igo_cc:
+        selected_igo[idx] = igo_cc[el]
+    
 
 with open(output_filename, 'w') as txt_file:
     for el in net:
-        if baci_cc[el] not in igo_cc:
+        if baci_cc[el] not in selected_igo:
             continue
         for el2 in net[el]:
-            if baci_cc[el] not in igo_cc:
+            if baci_cc[el] not in selected_igo:
                 continue
             txt_file.write(f'{ el } { el2 } { net[el][el2] }\n')
