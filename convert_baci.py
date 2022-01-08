@@ -2,7 +2,7 @@ import sys
 import csv
 
 input_filename = 'data/BACI/BACI_HS12_Y2014_V202102.csv'
-output_filename = 'net/baci.txt'
+output_filename = 'net/baci_matching_igo.txt'
 
 baci_cc_filename = 'data/BACI/country_codes_V202102.csv'
 igo_cc_filename = 'data/IGO/country_codes.csv'
@@ -64,15 +64,14 @@ with open(baci_cc_filename) as cc_file:
         line_count += 1
 
 with open(igo_cc_filename) as cc_file:
-    
-    csv_reader = csv.DictReader(cc_file)
+    csv_reader = csv.reader(cc_file, delimiter=';')
     line_count = 0
     
     for row in csv_reader:
         if line_count == 0:
             line_count += 1
         
-        igo_cc[row['country_code']] = row['country_name']
+        igo_cc[row[2]] = row[0]
         line_count += 1
 
 with open(igo_net_filename) as txt_file:
