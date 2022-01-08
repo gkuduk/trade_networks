@@ -49,4 +49,6 @@ closeness = nx.closeness_centrality(BACI_conn)
 #betweenness
 betweenness = nx.betweenness_centrality(BACI_conn)
 betweenness_weighted = nx.betweenness_centrality(BACI_conn,weight= 'weight')
-#przechodniość?
+#przechodniość
+transitivity= nx.transitivity(BACI_conn)
+print("Transitivity: ",transitivity)
