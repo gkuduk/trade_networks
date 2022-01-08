@@ -50,7 +50,56 @@ with open(input_filename, encoding="utf-8-sig") as csv_file:
                     print(organizations_members_value[org][j])
                     print("")
 
+    baci_net_filename='net/baci_matching_igo.txt'
+    baci_cc_filename = 'data/BACI/country_codes_V202102.csv'
+    igo_cc_filename = 'data/IGO/country_codes.csv'
+    selected_baci=[]
+    igo_cc= {}
+    baci_cc={}
+    with open(baci_net_filename) as txt_file:
+        lines = txt_file.read().splitlines()
+
+        for line in lines:
+            row = line.split(' ')
+
+            if row[0] not in selected_baci:
+                selected_baci.append(row[0])
+            if row[1] not in selected_baci:
+                selected_baci.append(row[1])
+
+    with open(baci_cc_filename) as cc_file:
+
+        csv_reader = csv.DictReader(cc_file)
+        line_count = 0
+
+        for row in csv_reader:
+            if line_count == 0:
+                line_count += 1
+
+            baci_cc[row['country_code']] = row['country_name_full']
+            line_count += 1
+
+    with open(igo_cc_filename) as cc_file:
+
+        csv_reader = csv.reader(cc_file, delimiter=';')
+        line_count = 0
+
+        for row in csv_reader:
+            if line_count == 0:
+                line_count += 1
+            igo_cc[row[2]] = row[0]
+            line_count += 1
+
     with open(output_filename, 'w') as txt_file:
+        count= {}
         for el in countries_conn:
+
             if countries_conn[el]!=0:
-                txt_file.write(f'{el[0]} {el[1]} {countries_conn[el]}\n')
+                if igo_cc[el[0]] not in baci_cc.values():
+                    # print(igo_cc[str(el[0])])
+                    count[el[0]] = igo_cc[el[0]]
+                if igo_cc[el[0]] in baci_cc.values():
+                    # print(igo_cc[str(el[0])])
+                    txt_file.write(f'{el[0]} {el[1]} {countries_conn[el]}\n')
+        print(len(count))
+        print(count)
