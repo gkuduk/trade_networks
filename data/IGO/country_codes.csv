@@ -1,221 +1,223 @@
-country_name,iso_3digit_alpha,country_code
-Afghanistan,AFG,700
-Albania,ALB,339
-Algeria,ALG,615
-Andorra,AND,232
-Angola,ANG,540
-Antigua and Barbuda,AAB,58
-Argentina,ARG,160
-Armenia,ARM,371
-Australia,AUL,900
-Austria,AUS,305
-Austria-Hungary,AUH,300
-Azerbaijan,AZE,373
-Baden,BAD,267
-Bahamas,BHM,31
-Bahrain,BAH,692
-Bangladesh,BNG,771
-Barbados,BAR,53
-Bavaria,BAV,245
-Belarus,BLR,370
-Belgium,BEL,211
-Belize,BLZ,80
-Benin,BEN,434
-Bhutan,BHU,760
-Plurinational State of Bolivia,BOL,145
-Bosnia Herzegovina,BOS,346
-Botswana,BOT,571
-Brazil,BRA,140
-Brunei Darussalam,BRU,835
-Bulgaria,BUL,355
-Burkina Faso,BFO,439
-Burundi,BUI,516
-Cambodia,CAM,811
-Cameroon,CAO,471
-Canada,CAN,20
-Cape Verde,CAP,402
-Central African Republic,CEN,482
-Chad,CHA,483
-Chile,CHL,155
-China,CHN,710
-Colombia,COL,100
-Comoros,COM,581
-Congo,CON,484
-Costa Rica,COS,94
-Croatia,CRO,344
-Cuba,CUB,40
-Cyprus,CYP,352
-Czechia,CZR,316
-Czechoslovakia,CZE,315
-Democratic Republic of the Congo,DRC,490
-Denmark,DEN,390
-Djibouti,DJI,522
-Dominica,DMA,54
-State Name Abb.,COW,No.
-Dominican Republic,DOM,42
-Ecuador,ECU,130
-Egypt,EGY,651
-El Salvador,SAL,92
-Equatorial Guinea,EQG,411
-Eritrea,ERI,531
-Estonia,EST,366
-Ethiopia,ETH,530
-Federated State of Micronesia,FSM,987
-Fiji,FIJ,950
-Finland,FIN,375
-France, Monaco,FRN,220
-Gabon,GAB,481
-Gambia,GAM,420
-Georgia,GRG,372
-Germany,GDR,265
-Germany,GFR,260
-Germany,GMY,255
-Ghana,GHA,452
-Greece,GRC,350
-Grenada,GRN,55
-Guatemala,GUA,90
-Guinea,GUI,438
-Guinea-Bissau,GNB,404
-Guyana,GUY,110
-Haiti,HAI,41
-Hanover,HAN,240
-Hesse Electoral,HSE,273
-Hesse Grand Ducal,HSG,275
-Honduras,HON,91
-Hungary,HUN,310
-Iceland,ICE,395
-India,IND,750
-Indonesia,INS,850
-Iran,IRN,630
-Iraq,IRQ,645
-Ireland,IRE,205
-Israel,ISR,666
-Italy,ITA,325
-Côte d'Ivoire,CDI,437
-Jamaica,JAM,51
-Japan,JPN,740
-Jordan,JOR,663
-Kazakhstan,KZK,705
-Kenya,KEN,501
-Democratic People's Republic of Korea,KOR,730
-Kuwait,KUW,690
-Kyrgyzstan,KYR,703
-Lao People's Dem. Rep.,LAO,812
-Latvia,LAT,367
-Lebanon,LEB,660
-Lesotho,LES,57019
-State Name Abb.,COW,No.
-Liberia,LBR,450
-Libya,LIB,620
-Switzerland, Liechtenstein,LIE,223
-Lithuania,LIT,368
-Luxembourg,LUX,212
-The Former Yugoslav Republic of Macedonia,MAC,343
-Madagascar,MAG,580
-Malawi,MAW,553
-Malaysia,MAL,820
-Maldives,MAD,781
-Mali,MLI,432
-Malta,MLT,338
-Marshall Islands,MSI,983
-Mauritania,MAA,435
-Mauritius,MAS,590
-Mecklenburg Schwerin,MEC,280
-Mexico,MEX,70
-Modena,MOD,332
-Republic of Moldova,MLD,359
-France, Monaco,MNC,221
-Mongolia,MON,712
-Morocco,MOR,600
-Mozambique,MZM,541
-Myanmar,MYA,775
-Namibia,NAM,565
-Nepal,NEP,790
-Netherlands,NTH,210
-New Zealand,NEW,920
-Nicaragua,NIC,93
-Niger,NIR,436
-Nigeria,NIG,475
-Democratic People's Republic of Korea,PRK,731
-Norway, Svalbard and Jan Mayen,NOR,385
-Oman,OMA,698
-Pakistan,PAK,770
-Palau,PAL,986
-Panama,PAN,95
-Papal States,PAP,327
-Papua New Guinea,PNG,910
-Paraguay,PAR,150
-Italy,PMA,335
-Peru,PER,135
-Philippines,PHI,840
-Poland,POL,290
-Portugal,POR,235
-Qatar,QAT,694
-Viet Nam,RVN,817
-Romania,ROM,360
-Russian Federation,RUS,365
-Rwanda,RWA,517
-Samoa,WSM,990
-San Marino,SNM,331
-Sao Tome and Principe,STP,403
-State Name Abb.,COW,No.
-Saxony,SAX,269
-Senegal,SEN,433
-Seychelles,SEY,591
-Sierra Leone,SIE,451
-Singapore,SIN,830
-Slovakia,SLO,317
-Slovenia,SLV,349
-Solomon Islands,SOL,940
-Somalia,SOM,520
-South Africa,SAF,560
-Republic of Korea,ROK,732
-South Sudan,SSD,626
-Spain,SPN,230
-Sri Lanka,SRI,780
-Saint Kitts and Nevis,SKN,60
-Saint Lucia,SLU,56
-Saint Vincent and the Grenadines,SVG,57
-Sudan,SUD,625
-Suriname,SUR,115
-Swaziland,SWA,572
-Sweden,SWD,380
-Switzerland, Liechtenstein,SWZ,225
-Syria,SYR,652
-China,TAW,713
-Tajikistan,TAJ,702
-United Republic of Tanzania,TAZ,510
-Thailand,THI,800
-Togo,TOG,461
-Tonga,TON,955
-Trinidad and Tobago,TRI,52
-Tunisia,TUN,616
-Turkey,TUR,640
-Turkmenistan,TKM,701
-Italy,TUS,337
-Two Sicilies,SIC,329
-Uganda,UGA,500
-Ukraine,UKR,369
-United Arab Emirates,UAE,696
-United Kingdom,UKG,200
-USA, Puerto Rico and US Virgin Islands,USA,2
-Uruguay,URU,165
-Uzbekistan,UZB,704
-Vanuatu,VAN,935
-Venezuela,VEN,101
-Viet Nam,DRV,816
-Wuerttemburg,WRT,271
-Yemen,YEM,679
-Yemen,YAR,678
-Yemen,YPR,680
-Yugoslavia,YUG,345
-Zambia,ZAM,551
-United Republic of Tanzania,ZAN,511
-Zimbabwe,ZIM,552
-Saudi Arabia,SAU,670
-Montenegro,,341
-Kiribati,,946
-Tuvalu,,947
-Nauru,,970
-Timor-Leste,,860
-Lesotho,,570
+country_name;iso_3digit_alpha;country_code
+Afghanistan;AFG;700
+Albania;ALB;339
+Algeria;ALG;615
+Andorra;AND;232
+Angola;ANG;540
+Antigua and Barbuda;AAB;58
+Argentina;ARG;160
+Armenia;ARM;371
+Australia;AUL;900
+Austria;AUS;305
+Austria-Hungary;AUH;300
+Azerbaijan;AZE;373
+Baden;BAD;267
+Bahamas;BHM;31
+Bahrain;BAH;692
+Bangladesh;BNG;771
+Barbados;BAR;53
+Bavaria;BAV;245
+Belarus;BLR;370
+Belgium;BEL;211
+Belize;BLZ;80
+Benin;BEN;434
+Bhutan;BHU;760
+Plurinational State of Bolivia;BOL;145
+Bosnia Herzegovina;BOS;346
+Botswana;BOT;571
+Brazil;BRA;140
+Brunei Darussalam;BRU;835
+Bulgaria;BUL;355
+Burkina Faso;BFO;439
+Burundi;BUI;516
+Cambodia;CAM;811
+Cameroon;CAO;471
+Canada;CAN;20
+Cape Verde;CAP;402
+Central African Republic;CEN;482
+Chad;CHA;483
+Chile;CHL;155
+China;CHN;710
+Colombia;COL;100
+Comoros;COM;581
+Congo;CON;484
+Costa Rica;COS;94
+Croatia;CRO;344
+Cuba;CUB;40
+Cyprus;CYP;352
+Czechia;CZR;316
+Czechoslovakia;CZE;315
+Democratic Republic of the Congo;DRC;490
+Denmark;DEN;390
+Djibouti;DJI;522
+Dominica;DMA;54
+State Name Abb.;COW;No.
+Dominican Republic;DOM;42
+Ecuador;ECU;130
+Egypt;EGY;651
+El Salvador;SAL;92
+Equatorial Guinea;EQG;411
+Eritrea;ERI;531
+Estonia;EST;366
+Ethiopia;ETH;530
+Federated State of Micronesia;FSM;987
+Fiji;FIJ;950
+Finland;FIN;375
+France, Monaco;FRN;220
+Gabon;GAB;481
+Gambia;GAM;420
+Georgia;GRG;372
+Germany;GDR;265
+Germany;GFR;260
+Germany;GMY;255
+Ghana;GHA;452
+Greece;GRC;350
+Grenada;GRN;55
+Guatemala;GUA;90
+Guinea;GUI;438
+Guinea-Bissau;GNB;404
+Guyana;GUY;110
+Haiti;HAI;41
+Hanover;HAN;240
+Hesse Electoral;HSE;273
+Hesse Grand Ducal;HSG;275
+Honduras;HON;91
+Hungary;HUN;310
+Iceland;ICE;395
+India;IND;750
+Indonesia;INS;850
+Iran;IRN;630
+Iraq;IRQ;645
+Ireland;IRE;205
+Israel;ISR;666
+Italy;ITA;325
+Côte d'Ivoire;CDI;437
+Jamaica;JAM;51
+Japan;JPN;740
+Jordan;JOR;663
+Kazakhstan;KZK;705
+Kenya;KEN;501
+Democratic People's Republic of Korea;KOR;730
+Kuwait;KUW;690
+Kyrgyzstan;KYR;703
+Lao People's Dem. Rep.;LAO;812
+Latvia;LAT;367
+Lebanon;LEB;660
+Lesotho;LES;57019
+State Name Abb.;COW;No.
+Liberia;LBR;450
+Libya;LIB;620
+Switzerland, Liechtenstein;LIE;223
+Lithuania;LIT;368
+Luxembourg;LUX;212
+The Former Yugoslav Republic of Macedonia;MAC;343
+Madagascar;MAG;580
+Malawi;MAW;553
+Malaysia;MAL;820
+Maldives;MAD;781
+Mali;MLI;432
+Malta;MLT;338
+Marshall Islands;MSI;983
+Mauritania;MAA;435
+Mauritius;MAS;590
+Mecklenburg Schwerin;MEC;280
+Mexico;MEX;70
+Modena;MOD;332
+Republic of Moldova;MLD;359
+France; Monaco;MNC;221
+Mongolia;MON;712
+Morocco;MOR;600
+Mozambique;MZM;541
+Myanmar;MYA;775
+Namibia;NAM;565
+Nepal;NEP;790
+Netherlands;NTH;210
+New Zealand;NEW;920
+Nicaragua;NIC;93
+Niger;NIR;436
+Nigeria;NIG;475
+Democratic People's Republic of Korea;PRK;731
+Norway; Svalbard and Jan Mayen;NOR;385
+Oman;OMA;698
+Pakistan;PAK;770
+Palau;PAL;986
+Panama;PAN;95
+Papal States;PAP;327
+Papua New Guinea;PNG;910
+Paraguay;PAR;150
+Italy;PMA;335
+Peru;PER;135
+Philippines;PHI;840
+Poland;POL;290
+Portugal;POR;235
+Qatar;QAT;694
+Viet Nam;RVN;817
+Romania;ROM;360
+Russian Federation;RUS;365
+Rwanda;RWA;517
+Samoa;WSM;990
+San Marino;SNM;331
+Sao Tome and Principe;STP;403
+State Name Abb.;COW;No.
+Saxony;SAX;269
+Senegal;SEN;433
+Seychelles;SEY;591
+Sierra Leone;SIE;451
+Singapore;SIN;830
+Slovakia;SLO;317
+Slovenia;SLV;349
+Solomon Islands;SOL;940
+Somalia;SOM;520
+South Africa;SAF;560
+Republic of Korea;ROK;732
+South Sudan;SSD;626
+Spain;SPN;230
+Sri Lanka;SRI;780
+Saint Kitts and Nevis;SKN;60
+Saint Lucia;SLU;56
+Saint Vincent and the Grenadines;SVG;57
+Sudan;SUD;625
+Suriname;SUR;115
+Swaziland;SWA;572
+Sweden;SWD;380
+Switzerland, Liechtenstein;SWZ;225
+Syria;SYR;652
+China;TAW;713
+Tajikistan;TAJ;702
+United Republic of Tanzania;TAZ;510
+Thailand;THI;800
+Togo;TOG;461
+Tonga;TON;955
+Trinidad and Tobago;TRI;52
+Tunisia;TUN;616
+Turkey;TUR;640
+Turkmenistan;TKM;701
+Italy;TUS;337
+Two Sicilies;SIC;329
+Uganda;UGA;500
+Ukraine;UKR;369
+United Arab Emirates;UAE;696
+United Kingdom;UKG;200
+USA, Puerto Rico and US Virgin Islands;USA;2
+Uruguay;URU;165
+Uzbekistan;UZB;704
+Vanuatu;VAN;935
+Venezuela;VEN;101
+Viet Nam;DRV;816
+Wuerttemburg;WRT;271
+Yemen;YEM;679
+Yemen;YAR;678
+Yemen;YPR;680
+Yugoslavia;YUG;345
+Zambia;ZAM;551
+United Republic of Tanzania;ZAN;511
+Zimbabwe;ZIM;552
+Saudi Arabia;SAU;670
+Montenegro;;341
+Kiribati;;946
+Tuvalu;;947
+Nauru;;970
+Timor-Leste;;860
+Kosovo;;347
+Norway, Svalbard and Jan Mayen;;385
+Lesotho;;570
