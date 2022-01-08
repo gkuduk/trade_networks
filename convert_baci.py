@@ -97,6 +97,5 @@ with open(output_filename, 'w') as txt_file:
         if baci_cc[el] not in selected_igo:
             continue
         for el2 in net[el]:
-            if baci_cc[el] not in selected_igo:
-                continue
-            txt_file.write(f'{ el } { el2 } { net[el][el2] }\n')
+            if baci_cc[el2] in selected_igo:
+                txt_file.write(f'{ el } { el2 } { net[el][el2] }\n')
