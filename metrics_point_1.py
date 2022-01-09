@@ -31,9 +31,20 @@ def euclid_dist(A, B):
         distance.append(math.sqrt(d))
     return distance
 
+def jaccard_dist(A, B):
+    distance = []
+    for i in range(0, A.shape[0]):
+        up=0
+        low=0
+        for k in range(0, A.shape[0]):
+            up+=min(A[i,k],B[i,k])
+            low += max(A[i, k], B[i, k])
+        distance.append(1-(up/low))
+    return distance
+
 #calculate Euclide distance
 print(BACI_adjacency_matrix_norm.shape)
 print(IGO_adjacency_matrix_norm.shape)
-distance = euclid_dist(BACI_adjacency_matrix_norm,IGO_adjacency_matrix_norm)
+distance = jaccard_dist(BACI_adjacency_matrix_norm,IGO_adjacency_matrix_norm)
 print(len(distance))
-print(distance)
+#print(distance)
