@@ -4,6 +4,7 @@ import math
 
 import networkx as nx
 import numpy as np
+from sklearn.preprocessing import normalize
 
 baci_net_filename = 'net/baci_matching_igo.txt'
 igo_net_filename = 'net/IGO_selected_politic_and_military.txt'
@@ -14,12 +15,12 @@ IGO_net= nx.read_weighted_edgelist(igo_net_filename,  nodetype=int)
 BACI_adjacency_matrix=nx.adjacency_matrix(BACI_net)
 IGO_adjacency_matrix=nx.adjacency_matrix(IGO_net,nodelist=list(BACI_net.nodes))
 
-#normalize matrixes
-row_sums = BACI_adjacency_matrix.sum(axis=1)
-BACI_adjacency_matrix_norm = BACI_adjacency_matrix / row_sums
+#row normalize matrixes
+#row_sums = BACI_adjacency_matrix.sum(axis=1)
+BACI_adjacency_matrix_norm =normalize(BACI_adjacency_matrix, axis=1, norm='l1')  #BACI_adjacency_matrix / row_sums
 
-row_sums = IGO_adjacency_matrix.sum(axis=1)
-IGO_adjacency_matrix_norm = IGO_adjacency_matrix / row_sums
+#row_sums = IGO_adjacency_matrix.sum(axis=1)
+IGO_adjacency_matrix_norm =normalize(IGO_adjacency_matrix, axis=1, norm='l1') #IGO_adjacency_matrix / row_sums
 
 def euclid_dist(A, B):
     distance = []
