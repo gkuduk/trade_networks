@@ -56,6 +56,7 @@ with open(input_filename, encoding="utf-8-sig") as csv_file:
     selected_baci=[]
     igo_cc= {}
     igo_contry_to_code={}
+    baci_contry_to_code = {}
     baci_cc={}
     with open(baci_net_filename) as txt_file:
         lines = txt_file.read().splitlines()
@@ -78,6 +79,7 @@ with open(input_filename, encoding="utf-8-sig") as csv_file:
                 line_count += 1
 
             baci_cc[row['country_code']] = row['country_name_full']
+            baci_contry_to_code[row['country_name_full']]=row['country_code']
             line_count += 1
 
     with open(igo_cc_filename) as cc_file:
@@ -102,6 +104,6 @@ with open(input_filename, encoding="utf-8-sig") as csv_file:
                     count[el[0]] = igo_cc[el[0]]
                 if igo_cc[el[0]] in baci_cc.values()and igo_cc[el[1]] in baci_cc.values():
                     # print(igo_cc[str(el[0])])
-                    txt_file.write(f'{igo_contry_to_code[igo_cc[el[0]]]} {igo_contry_to_code[igo_cc[el[1]]]} {countries_conn[el]}\n')
+                    txt_file.write(f'{baci_contry_to_code[igo_cc[el[0]]]} {baci_contry_to_code[igo_cc[el[1]]]} {countries_conn[el]}\n')
         print(len(count))
         print(count)
