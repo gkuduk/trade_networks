@@ -3,7 +3,7 @@ import sys, os
 import itertools
 import networkx as nx
 import numpy as np
-from portrait_divergence import portrait_divergence, portrait_py,weighted_portrait
+from portrait_divergence import portrait_divergence, portrait_py,weighted_portrait,portrait_divergence_weighted
 
 
 baci_net_filename = 'net/baci_matching_igo.txt'
@@ -22,7 +22,7 @@ IGO_adjacency_matrix_norm = 1000* IGO_adjacency_matrix / IGO_adjacency_matrix.su
 BACI_net= nx.from_numpy_matrix(BACI_adjacency_matrix_norm )
 IGO_net= nx.from_numpy_matrix(IGO_adjacency_matrix_norm )
 
-net=BACI_net
+net=IGO_net
 
 portrait = portrait_py(net)
 print(portrait)
@@ -44,3 +44,9 @@ print(portrait)
 plt.imshow(portrait, cmap='viridis', interpolation='nearest', aspect='auto',extent=[0,len(portrait[0]),0,len(portrait)])
 plt.colorbar()
 plt.show()
+
+##Plot unweighted network divergence
+Djs_BACIvIGO=[]
+Djs_BACIvIGO.append(portrait_divergence_weighted(BACI_net, IGO_net))
+Djs_BACIvIGO.append(portrait_divergence(BACI_net, IGO_net))
+print(Djs_BACIvIGO)
