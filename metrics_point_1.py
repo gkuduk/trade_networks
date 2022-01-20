@@ -1,10 +1,24 @@
 #Macierze sąsiedztwa - dadzą one ogólny wgląd w strukturę sieci oraz możliwość obliczenia
 # #dystansu Euclidesowego i Jaccard’a dla wersji sieci bez wag i ważonego dystansu Jaccard’a.
 import math
-
+import csv
 import networkx as nx
+from operator import itemgetter
 import numpy as np
 from sklearn.preprocessing import normalize
+
+baci_cc_filename = 'data/BACI/country_codes_V202102.csv'
+
+baci_cc={}
+with open(baci_cc_filename) as cc_file:
+        csv_reader = csv.DictReader(cc_file)
+        line_count = 0
+
+        for row in csv_reader:
+                if line_count == 0:
+                        line_count += 1
+
+                baci_cc[int(row['country_code'])] = row['country_name_full']
 
 baci_net_filename = 'net/baci_matching_igo.txt'
 igo_net_filename = 'net/IGO_selected_politic_and_military.txt'
@@ -46,5 +60,13 @@ def jaccard_dist(A, B):
 print(BACI_adjacency_matrix_norm.shape)
 print(IGO_adjacency_matrix_norm.shape)
 distance = jaccard_dist(BACI_adjacency_matrix_norm,IGO_adjacency_matrix_norm)
-print(len(distance))
+distance_to_code ={}
+for node in range(0,len(BACI_net.nodes())):
+    distance_to_code[list(BACI_net.nodes())[node]]=distance[node]
+top_countries = sorted(distance_to_code.items(),key=itemgetter(1),reverse=False)[0:10]
+print( "Nazwa państwa"+" ; "+ "Odległość")
+for node, deg in top_countries:
+        print( str(baci_cc[node])+" ; "+ str(deg))
+
+print(sum(distance_to_code.values())/len(distance_to_code.values()))
 #print(distance)
