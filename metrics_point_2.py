@@ -31,10 +31,9 @@ igo_cls_coef = nx.clustering(IGO_net)
 baci_cls_coef = {k: v for k, v in sorted(baci_cls_coef.items(), key=lambda el: el[1], reverse=True)}
 igo_cls_coef = {k: v for k, v in sorted(igo_cls_coef.items(), key=lambda el: el[1], reverse=True)}
 
-# top n
+# top n, bottom n
 baci_cls_coef_top = {k: v for k, v in list(baci_cls_coef.items())[:10]}
 baci_cls_coef_bot = {k: v for k, v in list(baci_cls_coef.items())[-10:]}
-# bottom n
 igo_cls_coef_top = {k: v for k, v in list(igo_cls_coef.items())[:10]}
 igo_cls_coef_bot = {k: v for k, v in list(igo_cls_coef.items())[-10:]}
 
