@@ -4,6 +4,7 @@
 # portrait_divergence.py
 # Jim Bagrow
 # Last Modified: 2018-04-24
+#https://github.com/bagrow/network-portrait-divergence/
 
 import sys, os
 import tempfile
